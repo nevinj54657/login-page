@@ -1,0 +1,11 @@
+body {
+  background-color: #f8f9fa;
+}
+.nav-link.active {
+  background-color: #9a9c40;
+  border-radius: 5px;
+}
+.card {
+  border: none;
+  border-radius: 10px;
+}

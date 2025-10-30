@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  margin: 0;
+  font-family: Lato;
+  background-color: #F5F5F5;
+}
+nav {
+  text-align: center;
+  width: 220px;
+  background-color: #161A47;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  position: fixed;
+  color: white;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+nav ul h2 {
+  color: white;
+  padding: 18px 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li a {
+  display: flex;
+  color: white;
+  padding: 18px 20px;
+  text-decoration: none;
+  font-weight: 500;
+  gap: 10px;
+}
+li a:hover {
+  background-color: #20235C;
+}
+li a:active {
+  background-color: #20235C;
+}
+li.logout {
+  margin-top: auto;
+}
+svg {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.dashboard_card svg {
+	margin-left: 6px;
+	vertical-align: middle;
+}
+.mainBody {
+  margin-left: 250px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin-top: 25px;
+  padding-right: 20px;
+}
+.dashboardHeader {
+	padding-left: 22px;
+}
+.mainBody h3 {
+	padding-bottom: 9px;
+}
+.dashboard_card {
+  border: 2px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 700px) {
+  nav {
+    width: 25%;
+  }
+  nav li a {
+    justify-content: center;
+    padding: 20px 20px;
+  }
+  .mainBody {
+    margin-left: 25%;
+    padding-right: 0px;
+  }
+  .navText {
+    display: none;
+  }
+}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+<link href="styles.css" rel="stylesheet">
+<title>Make It All</title>
+</head>
+
+<body>
+<nav>
+  <ul style="margin-top: 10px;">
+    <h2>Make it All</h2>
+    <li><a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid2x2-icon lucide-grid-2x2">
+        <path d="M12 3v18"/>
+        <path d="M3 12h18"/>
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+      </svg>
+      <div class="navText">Dashboard</div>
+      </a></li>
+    <li><a href="todoPage.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-checks-icon lucide-list-checks">
+        <path d="M13 5h8"/>
+        <path d="M13 12h8"/>
+        <path d="M13 19h8"/>
+        <path d="m3 17 2 2 4-4"/>
+        <path d="m3 7 2 2 4-4"/>
+      </svg>
+      <div class="navText">To-Do List</div>
+      </a></li>
+    <li><a href="knowledgePage.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-check-icon lucide-book-open-check">
+        <path d="M12 21V7"/>
+        <path d="m16 12 2 2 4-4"/>
+        <path d="M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3"/>
+      </svg>
+      <div class="navText">Knowledge Base</div>
+      </a></li>
+    <li class="logout"><a href="loginPage.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out">
+        <path d="m16 17 5-5-5-5"/>
+        <path d="M21 12H9"/>
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+      </svg>
+      <div class="navText">Logout</div>
+      </a></li>
+  </ul>
+</nav>
+<div class="mainBody">
+  <div class="dashboardHeader">
+  <h2>Admin Dashboard</h2>
+  <h3>Welcome Admin.</h3>
+  </div>
+  <div class="container-fluid">
+    <div class = "row h100" >
+      <div class = "col-md-6">
+        <div id = "user_tot" class = "dashboard_card">
+          <h3>Total Users</h3>
+          <p>3428 Total<br>
+            42 Active</p>
+        </div>
+      </div>
+      <div class = "col-md-6">
+        <div id = "pending_reg"  class = "dashboard_card">
+          <h3>Pending Registrations</h3>
+          <p>4</p>
+        </div>
+      </div>
+      <div class = "col-md-6">
+        <div id = "security" class = "dashboard_card">
+          <h3>Security</h3>
+          <canvas id="sec_bar" style="width:100%;max-width:500px"></canvas>
+          <script>
+                        const xValues = ["Failed Logins", "Password Resets"];
+                        const yValues = [55, 15];
+                        const barColors = ["blue","orange"];
+
+                        const ctx1 = document.getElementById('sec_bar');
+
+                        new Chart(ctx1, {
+                        type: "bar",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                            legend: {display: false},
+                            title: {
+                                display: true,
+                                text: "Security Data",
+                                font: {size: 16}
+                            }
+                            }
+                        }
+                        });
+                        </script> 
+        </div>
+      </div>
+      <div class = "col-md-6">
+        <div id = "tasks"  class = "dashboard_card">
+          <h3>Employee Progress</h3>
+          <div id = "pie_chart container" style="width:280px; height:280px; margin:auto; align-items: center;">
+            <canvas id="tasks_pie" style="width:100%;max-width:120px"></canvas>
+            <script>
+                                const xValuesP = ["In Progress", "Completed"];
+                                const yValuesP = [12, 38]; 
+                                const pieColors = ["#ffc107", "#28a745"];
+
+                                const ctx2 = document.getElementById('tasks_pie');
+
+                                new Chart(ctx2, {
+                                type: "pie",
+                                data: {
+                                    labels: xValuesP,
+                                    datasets: [{
+                                    backgroundColor: pieColors,
+                                    data: yValuesP
+                                    }]
+                                },
+                                options: {
+                                    plugins: {
+                                    legend: {
+                                        display: true,
+                                        position: "bottom"
+                                    },
+                                    title: {
+                                        display: true,
+                                        text: "Task Completion Status",
+                                        font: { size: 16 }
+                                    }
+                                    }
+                                }
+                                });
+                            </script> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
