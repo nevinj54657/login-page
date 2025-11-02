@@ -54,6 +54,158 @@ svg {
   vertical-align: middle;
   margin-right: 6px;
 }
+.knowledge-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.knowledge-title,
+.knowledge-tag,
+.knowledge-description {
+    margin-right: 0px;
+}
+
+.knowledge-title {
+    min-width: 150px;
+}
+
+.knowledge-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    height: 32px;
+    min-width: 80px;
+    white-space: nowrap;
+}
+
+.knowledge-tag p {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.knowledge-description {
+    flex: 1;
+    color: #575758;
+}
+
+.knowledge-list {
+    padding: 0;
+    margin: 0;
+}
+.header {
+    padding: 0px;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.knowledge-controls {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.button {
+    background-color: #F1D998;
+    padding: 5px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.knowledge-controls .new {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.header-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.header-divider .name {
+    min-width: 150px;
+}
+
+.header-divider .description {
+    flex: 1;
+}
+
+.header-divider .tag {
+    min-width: 100px;
+}
+
+.files {
+    display: flex;
+    justify-content: left;
+}
+
+.files p {
+    margin-right: 10px;
+}   
+
+.download {
+    cursor: pointer;
+    padding: 0 7px; 
+    background-color: #F1D998;
+    border-radius: 4px;
+}
+
+.file-size {
+    color: #575758;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.knowledge-title-input,
+.knowledge-description-input,
+.knowledge-text-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 8px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.knowledge-text-input {
+    resize: none;
+    width: 100%;
+    max-width: 100%;
+    min-height: 400px;
+    overflow: auto; 
+}
+
+.break-line {
+    border-bottom: 1px solid black; padding-bottom: 10px;;
+}
+
+.add-files-button {
+    display: block;
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
 .dashboard_card svg {
 	margin-left: 6px;
 	vertical-align: middle;
@@ -79,6 +231,176 @@ svg {
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+.nav-link.active {
+  background-color: #9a9c40;
+  border-radius: 5px;
+}
+.card {
+  border: none;
+  border-radius: 10px;
+}
+.cardLogin {
+    display: flex;
+  flex-direction: column;
+  width: 380px;
+  max-width: calc(100% - 32px);
+  align-items: stretch;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  overflow: visible;
+  background: #ffffff;
+  margin-top: 24px;
+}
+img {
+  display: block;
+  margin: 16px auto;
+}
+.loginPageBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey; /* light grey */
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+}
+.login-body {
+  padding: 18px 20px;
+}
+
+/* form elements */
+.login-body label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.login-body input[type="text"],
+.login-body input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.login-body input[type="submit"] {
+  width: 100%;
+  padding: 10px 12px;
+  background-color:goldenrod; /* bootstrap primary */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.login-body input[type="submit"]:hover {
+  opacity:1
+}
+.signupbutton {
+  width: 100%;
+  padding: 10px 12px;
+  background-color:goldenrod; /* bootstrap primary */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 0.9;
+}
+.signupbutton :hover {
+  opacity:1;
+}
+
+.login-body a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0d6efd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.signupbtn {
+  width: 100%;
+  padding: 10px 12px;
+  background-color:goldenrod; /* bootstrap primary */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+/* .signupbtn {
+  float: left;
+  width: 50%;
+} */
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  background-color: aliceblue;
+  width: 400px;
+}
+
+/* The Modal (background) */
+/* .modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+} */
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+/* .close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+} */
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 @media (max-width: 700px) {
   nav {
     width: 25%;
@@ -93,5 +415,10 @@ svg {
   }
   .navText {
     display: none;
+  }
+}
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
   }
 }

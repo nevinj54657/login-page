@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<nav>
+  <ul style="margin-top: 10px;">
+    <h2>Make it All</h2>
+    <li><a href="employeeDash.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid2x2-icon lucide-grid-2x2">
+        <path d="M12 3v18"/>
+        <path d="M3 12h18"/>
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+      </svg>
+      <div class="navText">Dashboard</div>
+      </a></li>
+    <li><a href="todoPage.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-checks-icon lucide-list-checks">
+        <path d="M13 5h8"/>
+        <path d="M13 12h8"/>
+        <path d="M13 19h8"/>
+        <path d="m3 17 2 2 4-4"/>
+        <path d="m3 7 2 2 4-4"/>
+      </svg>
+      <div class="navText">To-Do List</div>
+      </a></li>
+    <li><a href="knowledgePage.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-check-icon lucide-book-open-check">
+        <path d="M12 21V7"/>
+        <path d="m16 12 2 2 4-4"/>
+        <path d="M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3"/>
+      </svg>
+      <div class="navText">Knowledge Base</div>
+      </a></li>
+    <li class="logout"><a href="loginPage.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out">
+        <path d="m16 17 5-5-5-5"/>
+        <path d="M21 12H9"/>
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+      </svg>
+      <div class="navText">Logout</div>
+      </a></li>
+  </ul>
+</nav>
+	<div class="mainBody">
+    <div class="nav-div">
+        <a class="button" href="knowledgePage.html" style="text-decoration: none; color: black; font-size: 16px;">←</a>
+        <p class="button">Create</p>
+    </div>
+    <section>
+        <div class="knowledge-tag" style="background-color: #C4C4C4;">
+            <p>New tag</p>
+        </div>
+        <div>
+            <div>
+                <input type="text" class="knowledge-title-input" placeholder="Title" value="Printer Guide">
+                <input type="text" class="knowledge-description-input" placeholder="Description"
+                    value="Quick steps to print, copy, and scan on the office printer.">
+                <p class="break-line"></p>
+            </div>
+            <div>
+                <button class="add-files-button">Add files</button>
+                <textarea class="knowledge-text-input" placeholder="Text..."># Printer Guide
+
+A quick reference for everyday printing, copying, and scanning.
+
+## Quick Print
+1. Open your document and press Ctrl + P (Cmd + P on Mac).
+2. Select the office printer (e.g., "3rd Floor MFD").
+3. Set Pages, Color or B/W, and Duplex (double-sided).
+4. Click Print.
+5. If using Secure Print, release the job at the device.
+
+## Copy & Scan
+- Copy: Place pages, tap Copy, choose options, press Start.
+- Scan to Email: Tap Scan ➜ Email, enter your address, Start.
+- Scan to Folder: Tap Scan ➜ Folder, pick your team share, Start.
+
+### Troubleshooting
+- Paper jam: Follow on‑screen steps to remove jammed paper.
+- Low toner: Notify IT or office admin.
+- Queue stuck: Clear the print queue, then resend.
+
+### Notes
+- Use **Secure Print** for confidential documents.
+- Preferred device: `MFD-3EAST`
+- Shortcuts:
+  - Inline code: `Ctrl + P`
+  - Checkboxes:
+    - [x] Duplex
+    - [ ] Staple
+</textarea>
+            </div>
+        </div>
+    </section>
+    <script src="knowledgebase.js" async defer></script>
+</div>
+</body>
+
+</html>

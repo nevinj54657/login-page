@@ -6,6 +6,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
 <link href="styles.css" rel="stylesheet">
+<link rel="stylesheet" href="stylesheet.css">
 <title>Make It All</title>
 </head>
 
@@ -13,7 +14,7 @@
 <nav>
   <ul style="margin-top: 10px;">
     <h2>Make it All</h2>
-    <li><a>
+    <li><a href="employeeDash.html">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid2x2-icon lucide-grid-2x2">
         <path d="M12 3v18"/>
         <path d="M3 12h18"/>
@@ -50,61 +51,66 @@
   </ul>
 </nav>
 <div class="mainBody">
-  <div class="dashboardHeader">
-  <h2>Welcome to the Knowledge Base</h2>
-  <p>Make-It-All's central hub for documenting knowledge and sharing it with the wider company.</p>
-  </div>
-	  <div class="nav-div">
-        <a class="button" href="knowledgebase.html" style="text-decoration: none; color: black; font-size: 16px;">←</a>
-        <p class="button">Create</p>
-    </div>
-    <section>
-        <div class="knowledge-tag" style="background-color: #C4C4C4;">
-            <p>New tag</p>
+	     <h1>Welcome to the Knowledge Base</h1>
+        <p>Your one-stop solution for all your queries.</p>
+        <div class="knowledge-controls">
+            <p class="button">Search</p>
+            <p class="button">Filter</p>
+            <p class="button">Sort</p>
+            <a class="button new" href="newKnowledgePage.html" style="text-decoration: none; color: black;">New</a>
         </div>
-        <div>
-            <div>
-                <input type="text" class="knowledge-title-input" placeholder="Title" value="Printer Guide">
-                <input type="text" class="knowledge-description-input" placeholder="Description"
-                    value="Quick steps to print, copy, and scan on the office printer.">
-                <p class="break-line"></p>
-            </div>
-            <div>
-                <button class="add-files-button">Add files</button>
-                <textarea class="knowledge-text-input" placeholder="Text..."># Printer Guide
-
-A quick reference for everyday printing, copying, and scanning.
-
-## Quick Print
-1. Open your document and press Ctrl + P (Cmd + P on Mac).
-2. Select the office printer (e.g., "3rd Floor MFD").
-3. Set Pages, Color or B/W, and Duplex (double-sided).
-4. Click Print.
-5. If using Secure Print, release the job at the device.
-
-## Copy & Scan
-- Copy: Place pages, tap Copy, choose options, press Start.
-- Scan to Email: Tap Scan ➜ Email, enter your address, Start.
-- Scan to Folder: Tap Scan ➜ Folder, pick your team share, Start.
-
-### Troubleshooting
-- Paper jam: Follow on‑screen steps to remove jammed paper.
-- Low toner: Notify IT or office admin.
-- Queue stuck: Clear the print queue, then resend.
-
-### Notes
-- Use **Secure Print** for confidential documents.
-- Preferred device: `MFD-3EAST`
-- Shortcuts:
-  - Inline code: `Ctrl + P`
-  - Checkboxes:
-    - [x] Duplex
-    - [ ] Staple
-</textarea>
-            </div>
+        <div class="header-divider">
+            <h2 class="name">Name</h2>
+            <h2 class="description">Description</h2>
+            <h2 class="tag">Tag</h2>
         </div>
-    </section>
-    <script src="knowledgebase.js" async defer></script>
-  </div>
+        <ul class="knowledge-list" style="list-style-type: none;">
+            <li class="knowledge-item">
+                <div class="knowledge-title">
+                    <p>Requirements</p>
+                </div>
+                <div class="knowledge-description">
+                    <p>Requirements for project 1</p>
+                </div>
+                <div class="knowledge-tag" style="background-color: #FFC5BA;">
+                    <p>Software Engineering</p>
+                </div>
+            </li>
+            <li class="knowledge-item">
+                <div class="knowledge-title">
+                    <p>Printer Guide</p>
+                </div>
+                <div class="knowledge-description">
+                    <p>Guide on how to use the printer in the office.</p>
+                </div>
+                <div class="knowledge-tag" style="background-color: #BADEFF;">
+                    <p>Office Usage</p>
+                </div>
+            </li>
+            <li class="knowledge-item">
+                <div class="knowledge-title">
+                    <p>Network Setup</p>
+                </div>
+                <div class="knowledge-description">
+                    <p>Instructions for setting up the office network.</p>
+                </div>
+                <div class="knowledge-tag" style="background-color: #FFF6BA;">
+                    <p>IT Support</p>
+                </div>
+            </li>
+            <li class="knowledge-item">
+                <div class="knowledge-title">
+                    <p>Office Supplies</p>
+                </div>
+                <div class="knowledge-description">
+                    <p>Information about ordering office supplies.</p>
+                </div>
+                <div class="knowledge-tag" style="background-color: #BADEFF;">
+                    <p>Office Usage</p>
+                </div>
+            </li>
+        </ul>
+        <script src="knowledgebase.js" async defer></script>
+	</div>
 </body>
 </html>
